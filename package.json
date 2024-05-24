@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrewborstein/portfolio.git"
+    "url": "git+https://github.com/jaaz7/portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrewborstein/portfolio/issues"
+    "url": "https://github.com/jaaz7/portfolio/issues"
   },
-  "homepage": "https://github.com/andrewborstein/portfolio#readme",
+  "homepage": "https://github.com/jaaz7/portfolio#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2"
