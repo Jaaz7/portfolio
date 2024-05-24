@@ -2,6 +2,14 @@ body {
   color: #333;
   font-size: 16px;
 }
+.intro2 {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-weight: 300;
+  font-family: 'Courier New', monospace;
+  border-radius: 5px;
+  overflow: auto;
+}
 a {
   color: #009688;
 }
@@ -116,8 +124,8 @@ li.logo span {
   font-size: 14px;
 }
 .brand-logo h1 {
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1.1em;
+  line-height: 1em;
   margin: inherit;
   font-weight: inherit;
 }
@@ -168,6 +176,9 @@ h3 {
 }
 #intro h2 {
   font-size: calc(1em + 3vw);
+}
+#intro .intro2 {
+  font-size: calc(0.4em + 1.2vw);
 }
 .overlay {
   /* background-color: rgba(0, 0, 0, 0.4); */
@@ -390,7 +401,7 @@ small {
   .name-title {
     display: block;
     height: 100%;
-    padding-top: 15px;
+    padding-top: 20px;
     text-align: center;
     width: 100%;
     position: absolute;
@@ -401,7 +412,7 @@ small {
     line-height: 20px;
   }
   .name-title a {
-    font-size: 22px;
+    font-size: 27px;
     display: block;
   }
   .name-title span {
@@ -440,6 +451,9 @@ small {
   }
   #intro.section .container *:not(span) {
     padding: 0;
+  }
+  #intro .intro2 {
+    font-size: calc(0.4em + 2vw);
   }
   .card .card-content .card-title {
     font-size: 20px;
