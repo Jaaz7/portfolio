@@ -280,7 +280,7 @@
       </blockquote>
       </p>
       I've always had a thirst for knowledge and a desire to share what I learn with others.<br>
-      My career has seen many different shapes and colors--.<br>
+      My career has seen many different shapes and colors-- this is working.<br>
       I seek out challenges that foster personal growth and contribute to a better world.<br>
       I'm passionate about developing valuable applications with real-world impact and deploying Machine Learning solutions give me the opportunity to make a difference.
       <br><br>
@@ -1154,22 +1154,15 @@
     <!-- Google Analytics ------------------------------------------------- If you want to enable your own account, assign
     analyticsId to your google analytics id, which should be the numbers following "UA-", e.g. var analyticsId =
     "12345678-9" -->
-      <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMH0XL4GM2"></script>
-  
-  
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CMH0XL4GM2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    // Fetch the Google Analytics ID from the Netlify function
-    fetch('/.netlify/functions/env_vars')
-      .then(response => response.text())
-      .then(GOOGLE_ANALYTICS_ID => {
-        gtag('config', GOOGLE_ANALYTICS_ID);
-      });
-  </script>
+  gtag('config', 'G-CMH0XL4GM2');
+</script>
 
 
     <!-- jQuery-->
