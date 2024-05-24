@@ -2,14 +2,6 @@ body {
   color: #333;
   font-size: 16px;
 }
-#intro .intro2 {
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-weight: 300;
-  font-family: 'Courier New', monospace;
-  border-radius: 5px;
-  overflow: auto;
-}
 a {
   color: #009688;
 }
@@ -66,7 +58,7 @@ p code {
   border: 0.25rem solid #ddd;
   border-left-width: 0.5rem;
   border-right-width: 0.5rem;
-  color: #EB5757;
+  color: #eb5757;
 }
 #blog a {
   font-size: 1.5rem;
@@ -148,9 +140,8 @@ h3 {
   height: 100vh;
 }
 #intro.section {
-  background: url('../img/jaaz.jpg') no-repeat center
-    center/cover;
-    /* background size might not be needed if the pic fills the div */
+  background: url("../img/jaaz.jpg") no-repeat center center/cover;
+  /* background size might not be needed if the pic fills the div */
   /* background-size: 60%; */
   position: relative;
 }
@@ -179,6 +170,12 @@ h3 {
 }
 #intro .intro2 {
   font-size: calc(0.4em + 1.2vw);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-weight: 300;
+  font-family: "Courier New", monospace;
+  border-radius: 5px;
+  overflow: auto;
 }
 .overlay {
   /* background-color: rgba(0, 0, 0, 0.4); */
