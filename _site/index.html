@@ -1150,80 +1150,28 @@
       </p>
     </div>
   </section>
-  <!-- <section id="blog" class="section scrollspy full-height">
-    <h3 class="page-title white-text teal">Blog</h3>
-    <div class="container">
-      <h4 id="posts-2020">2020</h4>
-      <ol aria-labelledby="posts-2020">
-        <li>
-          <a
-            class="hoverline"
-            href="/blog/moving-my-blog-to-eleventy-part-1/"
-            >Moving my blog to Eleventy, Part 1: Installing Node with NVM</a
-          >
-          <dl>
-            <dd>Published:</span>
-            <dt>
-              <time datetime="2020-05-06T00:00:00+00:00">
-                May 6, 2020
-              </time>
-            </dt>
-          </dl>
-        </li>
-      </ol>
-    </div>
-  </section> -->
 </main>
     <!-- Google Analytics ------------------------------------------------- If you want to enable your own account, assign
     analyticsId to your google analytics id, which should be the numbers following "UA-", e.g. var analyticsId =
     "12345678-9" -->
-    <script>
-      var analyticsId;
-      // If analytics id has been manually defined
-      if (analyticsId) {
-        // Initialize GA with local var
-        initGoogleAnalytics(analyticsId);
-      } else {
-        // Initialize GA with Netlify env var available via lamba function
-        fetch("/.netlify/functions/env_vars")
-          .then(getEnvVar)
-          .then(initGoogleAnalytics)
-          .catch(handleError);
-      }
-      // ------------------------------------------------- Helper Functions
-      // --------------------------------------------------
-      function handleError(error) {
-        console.log("error", error);
-      }
-      function getEnvVar(response) {
-        // If the request was successful
-        if (response.ok) {
-          // Return the response text
-          return response.text();
-        } else {
-          // Return a rejected Promise object, triggering the .catch()
-          return Promise.reject(response);
-        }
-      }
-      // Set Up Google Analytics
-      function initGoogleAnalytics(analyticsId) {
-        if (analyticsId) {
-          // Inject the Google Analytics Tag Manager script into the DOM
-          analyticsUrl = "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
-          var ref = document.getElementsByTagName("script")[0];
-          var script = document.createElement("script");
-          script.src = analyticsUrl;
-          ref.parentNode.insertBefore(script, ref);
-          // Initialize Google Analytics
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-          gtag("config", "UA-" + analyticsId);
-        }
-      }
-    </script>
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMH0XL4GM2"></script>
+  
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Fetch the Google Analytics ID from the Netlify function
+    fetch('/.netlify/functions/env_vars')
+      .then(response => response.text())
+      .then(GOOGLE_ANALYTICS_ID => {
+        gtag('config', GOOGLE_ANALYTICS_ID);
+      });
+  </script>
+
+
     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Materialize - Compiled and minified JavaScript-->
