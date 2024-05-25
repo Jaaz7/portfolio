@@ -2,6 +2,24 @@ body {
   color: #333;
   font-size: 16px;
 }
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+#cli {
+  background-color: #000000;
+  color: #0ec30e;
+  border-right: 2px solid;
+  width: 60ch;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
+  animation: typing 4s steps(60, end), blink 0.5s step-end infinite;
+}
+.col {
+  margin-bottom: 20px;
+}
 a {
   color: #009688;
 }
@@ -169,7 +187,7 @@ h3 {
   font-size: calc(1em + 3vw);
 }
 #intro .intro2 {
-  font-size: calc(0.4em + 1.2vw);
+  font-size: calc(0.4em + 1.1vw);
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight: 300;
