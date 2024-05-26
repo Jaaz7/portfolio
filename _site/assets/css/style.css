@@ -5,6 +5,13 @@ body {
 :root {
   color-scheme: only light;
 }
+#contact-email,
+#contact-linkedin,
+#contact-github,
+#contact-devpost,
+#contact-kaggle {
+  font-size: 15px;
+}
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -485,7 +492,7 @@ small {
     margin: 0;
   }
   i.mdi-navigation-close.right {
-    position: relative;
+    /* position: relative; */
     bottom: 35px;
   }
   #contact a:not(.btn-floating) {
