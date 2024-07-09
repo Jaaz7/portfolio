@@ -18,8 +18,8 @@ body {
   }
 }
 #cli {
-  background-color: #000000;
-  color: #0ec30e;
+  background-color: #efd9a9;
+  color: #884120;
   border-right: 2px solid;
   width: 60ch;
   white-space: nowrap;
@@ -168,7 +168,7 @@ h3 {
   height: 100vh;
 }
 #intro.section {
-  background: url("../img/jaaz.jpg") no-repeat center center/cover;
+  background: url("../img/jaazpfp.jpg") no-repeat center center/cover;
   /* background size might not be needed if the pic fills the div */
   /* background-size: 60%; */
   position: relative;
@@ -507,6 +507,6 @@ small {
     margin: 0 auto;
   }
   #intro.section {
-    background-position-x: 80%;
+    background-position-x: 65%;
   }
 }
