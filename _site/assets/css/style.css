@@ -17,6 +17,9 @@ body {
     border-color: transparent;
   }
 }
+img.responsive-img {
+  max-width: 120%;
+}
 #cli {
   background-color: #efd9a9;
   color: #884120;
@@ -468,6 +471,9 @@ small {
     font-size: 22px;
     line-height: 200%;
     margin: 1rem 0 0;
+  }
+  img.responsive-img {
+    max-width: 30%;
   }
   #intro.section .container {
     padding: 0 1.5rem;
