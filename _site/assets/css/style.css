@@ -17,7 +17,7 @@ body {
     border-color: transparent;
   }
 }
-img.responsive-img {
+img.responsive-img-uni {
   max-width: 120%;
 }
 #cli {
@@ -472,8 +472,8 @@ small {
     line-height: 200%;
     margin: 1rem 0 0;
   }
-  img.responsive-img {
-    max-width: 30%;
+  img.responsive-img-uni {
+    max-width: 40%;
   }
   #intro.section .container {
     padding: 0 1.5rem;
