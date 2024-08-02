@@ -515,4 +515,13 @@ small {
   #intro.section {
     background-position-x: 65%;
   }
+  #experience .card .col.s12.m2 a {
+    display: inline;
+  }
+  .col {
+    margin-bottom: 0px;
+  }
+  #experience .card .col.s12.m2 a img {
+    max-height: 70px;
+  }
 }
