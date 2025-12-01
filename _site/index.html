@@ -14,19 +14,19 @@
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     />
-    <title>Jaaziel do Vale | Software Engineer -> Data Science & ML</title>
+    <title>Jaaziel do Vale | Software Dev -> Back-End, Data Science & ML</title>
     <!-- Open Graph-->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Jaaziel do Vale | Full Stack Software Engineer -> Data Science & ML"
+      content="Jaaziel do Vale | Full Stack Software Dev -> Back-End, Data Science & ML"
     />
     <meta property="og:description" content="I evolve data into solutions." />
     <meta property="og:url" content="jaazieldovale.com" />
     <meta
       property="og:site_name"
-      content="Jaaziel do Vale | Full Stack Software Engineer -> Data Science & ML"
+      content="Jaaziel do Vale | Full Stack Software Dev -> Back-End, Data Science & ML"
     />
     <meta property="article:publisher" content="jaazieldovale.com" />
     <meta property="og:image" content="assets/img/jaaz.jpg" />
@@ -34,7 +34,7 @@
     <meta name="twitter:site" content="@jaazdv" />
     <meta
       name="twitter:title"
-      content="Jaaziel do Vale | Full Stack Software Engineer -> Data Science & ML"
+      content="Jaaziel do Vale | Full Stack Software Dev -> Back-End, Data Science & ML"
     />
     <meta name="twitter:description" content="I evolve data into solutions." />
     <meta name="twitter:url" content="jaazieldovale.com" />
@@ -122,6 +122,63 @@
   <body>
     <!-- Custom Styles-->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+      .lang-switcher {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        gap: 8px;
+        z-index: 1100;
+      }
+      .lang-switcher button {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.95);
+        color: #222;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 150ms ease;
+      }
+      .lang-switcher button:hover {
+        border-color: #009688;
+        color: #009688;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+      }
+      .lang-switcher button.active {
+        border-color: #009688;
+        color: #009688;
+        font-weight: 600;
+      }
+      #google_translate_element,
+      .goog-logo-link,
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+      body {
+        top: 0 !important;
+      }
+      .goog-te-gadget {
+        height: 0;
+        overflow: hidden;
+      }
+    </style>
+    <div class="lang-switcher" aria-label="Language selector">
+      <button type="button" data-lang="en" class="active" aria-label="Switch to English">
+        🇬🇧 EN
+      </button>
+      <button type="button" data-lang="pt" aria-label="Switch to Portuguese">
+        🇵🇹 PT
+      </button>
+      <button type="button" data-lang="de" aria-label="Switch to German">
+        🇩🇪 DE
+      </button>
+    </div>
+    <div id="google_translate_element"></div>
     <!-- Navigation Menu-->
     <nav class="hide-on-small-only">
       <ul class="side-nav fixed section table-of-contents" id="vanta">
@@ -135,7 +192,7 @@
             <h1>
               <strong>Jaaziel<br />do Vale</strong>
             </h1>
-            <span class="brown-text light">D.Sci & ML Engineer</span></a
+            <span class="brown-text light">BE, D.Sci & ML Dev</span></a
           >
         </li>
         <li class="bold">
@@ -239,7 +296,7 @@
           href="#"
           class="teal-text"
           ><strong>Jaaziel do Vale</strong
-          ><span class="brown-text light">D.Sci & ML Engineer</span></a
+          ><span class="brown-text light">BE, D.Sci & ML Dev</span></a
         >
       </div>
     </nav>
@@ -354,7 +411,7 @@
             </h2>
           </blockquote>
           <p>
-            I'm a developer based in Munich, Germany. Welcome!<br /><br />
+            I'm a developer based in Munich, Germany.<br /><br />
             I consider myself a curious, self-taught person who loves learning
             new things, which has led my career to take on many different shapes
             and colors. From tutoring languages to working in a gaming company,
@@ -1599,8 +1656,8 @@
     <!-- typing animation JS -->
     <script>
       var text = [
-        ">_Full Stack & AI Engineer",
-        ">_Data Science & Machine Learning",
+        ">_Full-Stack & AI Dev",
+        ">_Back-End, Data Science & Machine Learning",
       ];
       var container = document.getElementById("cli");
       var line = 0;
@@ -1612,18 +1669,54 @@
             var textNode = document.createTextNode(text[line][i]);
             container.appendChild(textNode);
             i++;
-            setTimeout(type, 50);
+            setTimeout(type, 20);
           } else {
             var br = document.createElement("br");
             container.appendChild(br);
             line++;
             i = 0;
-            setTimeout(type, 100);
+            setTimeout(type, 50);
           }
         }
       }
 
       type();
     </script>
+    <script>
+      function setLanguage(lang) {
+        var combo = document.querySelector("select.goog-te-combo");
+        if (!combo) return;
+        combo.value = lang;
+        combo.dispatchEvent(new Event("change"));
+        document.documentElement.setAttribute("lang", lang);
+        document
+          .querySelectorAll(".lang-switcher button")
+          .forEach(function (btn) {
+            btn.classList.toggle("active", btn.dataset.lang === lang);
+          });
+      }
+
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,de,pt",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+        setTimeout(function () {
+          setLanguage("en");
+        }, 0);
+      }
+
+      document.addEventListener("click", function (e) {
+        var btn = e.target.closest(".lang-switcher button");
+        if (!btn) return;
+        setLanguage(btn.dataset.lang);
+      });
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
