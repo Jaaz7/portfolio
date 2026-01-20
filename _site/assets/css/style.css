@@ -1,9 +1,50 @@
 body {
   color: #333;
   font-size: 16px;
+  top: 0 !important;
 }
 :root {
   color-scheme: only light;
+}
+.lang-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 1100;
+}
+.lang-switcher button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.lang-switcher button:hover {
+  border-color: #009688;
+  color: #009688;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+.lang-switcher button.active {
+  border-color: #009688;
+  color: #009688;
+  font-weight: 600;
+}
+#google_translate_element,
+.goog-logo-link,
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+.goog-te-gadget {
+  height: 0;
+  overflow: hidden;
 }
 #contact-email,
 #contact-linkedin,
